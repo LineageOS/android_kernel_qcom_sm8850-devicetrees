@@ -1,3 +1,5 @@
+DTC_INCLUDE += $(srctree)/../vendor/qcom/sm8850-modules/qcom/opensource/audio-kernel
+
 ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 dtbo-y += pineapple-audio.dtbo \
                  pineapple-audio-cdp.dtbo \

@@ -1,3 +1,5 @@
+DTC_INCLUDE += $(srctree)/../vendor/qcom/sm8850-modules/qcom/opensource/synx-kernel
+
 # Use current $(MSM_ARCH) to set config/ makefile path
 SYNX_TARGET_MKFILE_PATH := $(SYNX_DEVICETREE_ROOT)/config/$(MSM_ARCH).mk
 # Check to see if current target makefile exists

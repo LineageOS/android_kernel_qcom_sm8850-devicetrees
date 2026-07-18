@@ -1,4 +1,5 @@
 load("//build/kernel/kleaf:kernel.bzl", "kernel_dtstree")
+load("//vendor/qcom/sm8850-modules/kleaf:repo_paths.bzl", "modules_label")
 
 exports_files(glob(["qcom/*.config"]))
 
@@ -8,6 +9,7 @@ kernel_dtstree(
         [
             "Makefile",
             "qcom/Makefile",
+            "qcom/**/bindings/**",
             "qcom/**/*.dtsi",
             "qcom/**/*.dts",
             "qcom/**/*.dtso",
@@ -20,6 +22,11 @@ kernel_dtstree(
             "**/*.bazel",
             "**/*.bzl",
         ],
-    ) + ["//common:kernel_aarch64_sources"],
+    ) + [
+        "//common:kernel_aarch64_sources",
+        modules_label("qcom/opensource/audio-kernel:dt_binding_headers"),
+        modules_label("qcom/opensource/camera-kernel:dt_binding_headers"),
+        modules_label("qcom/opensource/synx-kernel:dt_binding_headers"),
+    ],
     visibility = ["//visibility:public"],
 )
