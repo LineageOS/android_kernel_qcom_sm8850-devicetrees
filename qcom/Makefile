@@ -6,6 +6,9 @@
 # Combined dtb target is also generated using the fdt_overlay tool.
 # dtb-y += <base>-<board>.dtb
 
+# Silence all DTC warnings by default
+DTC_FLAGS += -q
+
 add-overlays = $(foreach o,$1,$(foreach b,$2,$(eval $(basename $b)-$(basename $o)-dtbs = $b $o) $(basename $b)-$(basename $o).dtb))
 
 # canoe-dtb-y is list of DTBs to install when doing non-overlay build
