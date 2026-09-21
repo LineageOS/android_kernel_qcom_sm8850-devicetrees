@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c82d533_97cec0b1",
+        "filename": "BUILD.bazel",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2026-09-21T06:46:56Z",
+      "side": 1,
+      "message": "`find qcom -name \\*.h` prints nothing, what is this for?",
+      "revId": "539831ea457b11e7a785fe6f16da5865d4520318",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
